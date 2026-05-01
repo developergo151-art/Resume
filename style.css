@@ -104,6 +104,11 @@ body {
     width: 50%;
     padding-top: 60px;
 }
+.skills {
+    background-color: white;
+    width: 1350px;
+    height: 1000px;
+}
 
 @media (max-width: 768px) {
     .heading {
