@@ -6,140 +6,175 @@
 
 body {
     background-color: #3a3a3a;
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* NAV */
 .cap {
-    background-color: #000000;
-    width: 100%;
+    background: black;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 10px 0;
+    gap: 20px;
+    padding: 15px;
     flex-wrap: wrap;
 }
 
 .heading {
     color: white;
-    width: 120px;
-    font-size: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: -0.5px;
-    word-spacing: -1px;
-    text-align: center;
-    font-weight: normal;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .heading:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
+    opacity: 0.7;
 }
 
+/* HOME */
 .information {
-    background-color: transparent;
-    padding-left: 10px;
-    width: 100%;
-    justify-content: center;
+    background: url("img/fon1.png") center/cover no-repeat;
 }
 
-.fon {
-    background-image:#3a3a3a;
-    width: 100%;
-    min-height: 100vh;
+.NameOne {
+   /* min-height: 100vh; */
+    height: 924px;
+    padding: 20px;
+    position: relative;
 }
 
 .name {
     color: #00fc69;
     text-align: center;
-    background-size: 400% auto;
-    font-size: clamp(2rem, 10vw, 10rem);
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+    font-size: clamp(2rem, 8vw, 6rem);
 }
 
-.NameOne {
-    max-width: 100%;
-    height: auto;
-    padding: 20px;
-}
 .hi {
-    color: #ffffff;
-    font-size: clamp(1rem, 2vw, 1rem);
-    padding-left: 164px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color: white;
     text-transform: uppercase;
+    padding-left: 300px;
+    padding-top: 200px;
+}
+
+.data {
+    color: white;
+}
+
+.phone {
+    color: white;
+    padding-top: 500px;
+}
+
+/* ABOUT */
+.about {
+    padding: 60px 20px;
+    width: 100%;
+    height: 924px;
+}
+
+.about_1 {
+    color: #00fc69;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.about_text {
+    color: white;
+    max-width: 700px;
+    margin-top: 20px;
+    font-size: clamp(3rem, 2vw, 1.5rem);
+}
+
+/* RESUME */
+.resume {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* SKILLS */
+.skills_max {
+    flex: 1;
+}
+
+.skills_1 {
+    color: #00fc69;
+    margin-bottom: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.f2 {
+    width: 40px;
+}
+
+.skill-item {
+    color: white;
+    width: 120px;
+}
+
+.progress {
+    width: 150px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #00ff22;
+    border-radius: 10px;
+    animation: load 2s;
+}
+
+@keyframes load {
+    from { width: 0; }
+}
+
+/* LEVELS */
+.html { width: 85%; }
+.js { width: 30%; }
+.php { width: 30%; }
+.mysql { width: 20%; }
+.react { width: 10%; }
+
+/* LANG */
+.language {
+    flex: 1;
+}
+
+.language_1 {
+    color: #00fc69;
+}
+
+.language-item1,
+.language-item2 {
+    color: white;
     margin-top: 20px;
 }
-.data {
-    color : #ffffff;
-    font-size: clamp(1rem, 1vw, 0.5rem);
-    font-weight: bold;
-    margin-top: 10px;
-    padding-top: 250px;
-}
-.phone {
-    color: #ffffff;
-    font-size: clamp(1rem, 1vw, 0.5rem);
-    font-weight: bold;
-    padding-top: 300px;
-}
-.description {
-    color: #ffffff;
-    font-size: clamp(1rem, 1vw, 0.5rem);
-    font-weight: bold;
-    padding-left: 50%;
-    padding-top: 250px;
-}
-.line {
-    display: flex;
-}
-.info {
-    width: 50%;
-}
-.info2 {
-    width: 50%;
-    padding-top: 60px;
-}
-.skills {
-    background-color: white;
-    width: 1350px;
-    height: 1000px;
+
+/* EXPERIENCE */
+.experience {
+    flex: 1;
 }
 
+.experience_1 {
+    color: #00fc69;
+}
+
+.experience-item1,
+.experience-item2 {
+    color: white;
+    margin-top: 20px;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-    .heading {
-        width: 100px;
-        font-size: 18px;
-        padding: 8px 15px;
-    }
-    
-    .name {
-        letter-spacing: 3px;
-    }
-}
-
-@media (max-width: 600px) {
-    .cap {
+    .resume {
         flex-direction: column;
-        gap: 5px;
-        padding: 15px 0;
-    }
-    
-    .heading {
-        font-size: 22px;
-        width: auto;
-        padding: 8px 20px;
-    }
-    
-    .information {
-        height: calc(100vh - 180px);
-    }
-    
-    .name {
-        letter-spacing: 2px;
     }
 }
