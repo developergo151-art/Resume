@@ -7,6 +7,11 @@
 body {
     background-color: #3a3a3a;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    padding-top: 70px;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 /* NAV */
@@ -17,29 +22,38 @@ body {
     gap: 20px;
     padding: 15px;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 }
 
 .heading {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: 0.3s;
 }
 
-.heading:hover {
-    opacity: 0.7;
-}
-
-/* HOME */
+/* HERO */
 .information {
     background: url("img/fon1.png") center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
 }
 
 .NameOne {
-   /* min-height: 100vh; */
-    height: 924px;
+    height: 100%;
     padding: 20px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hi {
+    color: white;
+    padding-left: 40px;
 }
 
 .name {
@@ -48,39 +62,29 @@ body {
     font-size: clamp(2rem, 8vw, 6rem);
 }
 
-.hi {
-    color: white;
-    text-transform: uppercase;
-    padding-left: 300px;
-    padding-top: 200px;
-}
-
 .data {
     color: white;
+    padding-left: 40px;
 }
 
 .phone {
     color: white;
-    padding-top: 500px;
+    padding-left: 40px;
 }
 
 /* ABOUT */
 .about {
     padding: 60px 20px;
-    width: 100%;
-    height: 924px;
 }
 
 .about_1 {
     color: #00fc69;
-    font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 .about_text {
     color: white;
-    max-width: 700px;
+    max-width: 600px;
     margin-top: 20px;
-    font-size: clamp(3rem, 2vw, 1.5rem);
 }
 
 /* RESUME */
@@ -98,14 +102,13 @@ body {
 
 .skills_1 {
     color: #00fc69;
-    margin-bottom: 20px;
 }
 
 .skill {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .f2 {
@@ -118,7 +121,7 @@ body {
 }
 
 .progress {
-    width: 150px;
+    width: 120px;
     height: 8px;
     background: #ddd;
     border-radius: 10px;
@@ -127,12 +130,6 @@ body {
 .progress-bar {
     height: 100%;
     background: #00ff22;
-    border-radius: 10px;
-    animation: load 2s;
-}
-
-@keyframes load {
-    from { width: 0; }
 }
 
 /* LEVELS */
@@ -154,7 +151,7 @@ body {
 .language-item1,
 .language-item2 {
     color: white;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 /* EXPERIENCE */
@@ -169,12 +166,20 @@ body {
 .experience-item1,
 .experience-item2 {
     color: white;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
+
     .resume {
         flex-direction: column;
     }
+
+    .hi,
+    .data,
+    .phone {
+        padding-left: 20px;
+    }
+
 }
