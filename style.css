@@ -4,26 +4,26 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #3a3a3a;
-    font-family: Arial, Helvetica, sans-serif;
-   /* overflow-x: hidden; */
-}
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #3a3a3a;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
 /* NAV */
+
 .cap {
     background: black;
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 15px;
+    padding: 10px;
     flex-wrap: wrap;
-
 }
-
 
 .heading {
     color: white;
@@ -32,15 +32,16 @@ html {
 }
 
 /* HERO */
+
 .information {
     background: url("img/fon1.png") center/cover no-repeat;
-    height: 908px;
+    min-height: 100vh;
     width: 100%;
 }
 
 .NameOne {
-    height: 100%;
-    padding: 10px;
+    min-height: 100vh;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,6 +50,7 @@ html {
 .hi {
     color: white;
     padding-left: 40px;
+    font-size: clamp(16px, 2vw, 24px);
 }
 
 .name {
@@ -60,43 +62,78 @@ html {
 .data {
     color: white;
     padding-left: 40px;
+    margin-bottom: 10px;
 }
 
 .phone {
     color: white;
     padding-left: 40px;
+    line-height: 1.6;
 }
 
 /* ABOUT */
+
 .about {
-    padding: 60px 20px;
+    padding: clamp(40px, 5vw, 80px) 20px;
+    min-height: 100vh;
 }
 
 .about_1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 600;
     color: #00fc69;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 
 .about_text {
-    color: white;
-    max-width: 600px;
-    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(22px, 4vw, 42px);
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    max-width: 1200px;
 }
 
 /* RESUME */
+
 .resume {
+    min-height: 100vh;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(20px, 5vw, 80px);
+    padding: clamp(20px, 4vw, 40px);
     flex-wrap: wrap;
-    padding: 40px;
-    gap: 40px;
+}
+
+/* BOXES */
+
+.box1,
+.box2,
+.box3 {
+    flex: 1 1 300px;
+    max-width: 420px;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* SKILLS */
+
 .skills_max {
     flex: 1;
 }
 
 .skills_1 {
     color: #00fc69;
+    margin-bottom: 20px;
 }
 
 .skill {
@@ -120,6 +157,7 @@ html {
     height: 8px;
     background: #ddd;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .progress-bar {
@@ -128,47 +166,125 @@ html {
 }
 
 /* LEVELS */
-.html { width: 85%; }
-.js { width: 30%; }
-.php { width: 30%; }
-.mysql { width: 20%; }
-.react { width: 10%; }
 
-/* LANG */
+.html {
+    width: 20%;
+}
+
+.js {
+    width: 10%;
+}
+
+.php {
+    width: 5%;
+}
+
+.mysql {
+    width: 0%;
+}
+
+.react {
+    width: 0%;
+}
+
+/* LANGUAGE */
+
 .language {
-    flex: 1;
+    margin-top: 40px;
 }
 
 .language_1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 600;
     color: #00fc69;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
 .language-item1,
 .language-item2 {
-    color: white;
-    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+/* PERSONAL */
+
+.personal_skills {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #00fc69;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.personal {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 /* EXPERIENCE */
+
 .experience {
     flex: 1;
 }
 
 .experience_1 {
     color: #00fc69;
+    margin-bottom: 20px;
+    font-size: clamp(28px, 4vw, 42px);
 }
 
 .experience-item1,
 .experience-item2 {
-    color: white;
-    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.box2_text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 /* MOBILE */
+
 @media (max-width: 768px) {
 
     .resume {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .skill {
+        justify-content: center;
     }
 
     .hi,
@@ -177,4 +293,19 @@ html {
         padding-left: 20px;
     }
 
+    .about {
+        min-height: auto;
+    }
+
+    .resume {
+        min-height: auto;
+    }
+
+    .about_text {
+        font-size: clamp(22px, 5vw, 42px);
+    }
+
+    .phone {
+        font-size: 14px;
+    }
 }
